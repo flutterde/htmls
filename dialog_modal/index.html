@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is a model</h1>
+    <button data-open-modal>open</button>
+    <dialog data-modal>
+        <h1>hello World</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
+        <form>
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="email">
+            <input type="text" placeholder="password">
+            <button>submit</button>
+        </form>
+        <button data-close-modal>close</button>
+    </dialog>
+
+
+    <script>
+        const openModalButtons = document.querySelector("[data-open-modal]");
+        const closeModalButtons = document.querySelector("[data-close-modal]");
+        const modal = document.querySelector("[data-modal]");
+
+        openModalButtons.addEventListener('click', () => {
+            modal.showModal();
+        });
+
+        closeModalButtons.addEventListener('click', () => {
+            modal.close();
+        });
+    </script>
+</body>
+</html>
